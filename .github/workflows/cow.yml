@@ -1,4 +1,4 @@
-# Hello World example for DTU biosustain and DTU bioengineering Data Club
+# Cowsay example
 
 name: Cow example
 
@@ -9,7 +9,7 @@ jobs:
   cowsay:
     runs-on: ubuntu-latest
     steps:
-    - name: pip install cowsay
+    - name: install
       run: pip install cowsay
-    - name: cowsay -c cheese -t  'hey there’​
-      run: cowsay -c cheese -t  'hey there’​
+    - name: cowsay​
+      run: cowsay -c cheese -t  'hey there'
