@@ -20,3 +20,8 @@ jobs:
       run: pip install cowpy
     - name: cowpy
       run: cowpy -c tux hi there
+  call_file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: run examples
+      run: python bin/examples.py
