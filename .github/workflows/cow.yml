@@ -20,8 +20,17 @@ jobs:
       run: pip install cowpy
     - name: cowpy
       run: cowpy -c tux hi there
-  call_file:
+  cowpy-test:
     runs-on: ubuntu-latest
     steps:
-    - name: run examples
-      run: python bin/examples.py
+    - uses: actions/checkout@v4
+    - name: install cowpy
+      run: |
+        pip install cowpy
+    - name: run cowpy 
+      run: |
+        cowpy -c tux "hola mundo"
+        echo "hola mundo" | cowpy -c tux
+    - name: run script with examples
+      run: |
+        python bin/examples.py
