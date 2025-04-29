@@ -13,3 +13,10 @@ jobs:
       run: pip install cowsay
     - name: cowsay​
       run: cowsay -c cheese -t  'hey there'
+  cowpy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install
+      run: pip install cowpy
+    - name: cowpy
+      run: cowpy -c tux hi there
