@@ -6,13 +6,10 @@ on:
   push:
 
 jobs:
-  install_step:
+  cowsay:
     runs-on: ubuntu-latest
     steps:
     - name: pip install cowsay
       run: pip install cowsay
-  use_step:
-    runs-on: ubuntu-latest
-    steps:
     - name: cowsay -c cheese -t  'hey there’​
       run: cowsay -c cheese -t  'hey there’​
